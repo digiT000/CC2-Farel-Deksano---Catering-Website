@@ -9,7 +9,7 @@ function ProductListSection() {
 
   async function fetchProduct() {
     try {
-      const response = await fetchDataProduct("master");
+      const response = await fetchDataProduct();
 
       setResponse(response.items);
       setIsLoading(false);
