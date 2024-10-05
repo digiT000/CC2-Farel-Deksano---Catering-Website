@@ -1,4 +1,3 @@
-import Button from "@/components/Button";
 import CallToActionSection from "@/components/Section/CallToActionSection";
 import PageTemplate from "@/components/PageTemplate";
 import HeroSection from "@/components/Section/HeroSection";

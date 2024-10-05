@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "../ProductCard";
 import { fetchDataProduct } from "@/utils/api";
-import { PackageProps } from "@/utils/interface";
 
 function ProductListSection() {
   //const []
@@ -34,15 +33,15 @@ function ProductListSection() {
         <div className="grid grid-cols-1 gap-10 lg:gap-12 md:grid-cols-2 lg:grid-cols-3">
           {isloading
             ? "loading..."
-            : response?.map((packageItem: any) => {
+            : response?.map((packageItem: any, key: number) => {
                 console.log(packageItem);
                 return (
                   <ProductCard
+                    key={key}
                     title={packageItem.fields.packageName}
                     description={packageItem.fields.summaryPackage}
                     thumbnail={packageItem.fields.imageLink}
                     totalMenu={packageItem.fields.listMenu.length}
-                    location={packageItem.fields.listLocation.length}
                   />
                 );
               })}
