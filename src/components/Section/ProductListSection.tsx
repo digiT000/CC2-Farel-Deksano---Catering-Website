@@ -1,26 +1,32 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "../ProductCard";
 import { fetchDataProduct } from "@/utils/api";
+import { PackageProps, ResponsePackage } from "@/utils/interface";
 
 function ProductListSection() {
-  //const []
   const [isloading, setIsLoading] = useState<boolean>(true);
-  const [response, setResponse] = useState<unknown[]>();
+  const [response, setResponse] = useState<PackageProps[]>();
 
   async function fetchProduct() {
     try {
       const response = await fetchDataProduct();
 
-      setResponse(response.items);
+      console.log("fetch resp:", response);
+
+      // mapping response to package properties
+      const responseItems = response.items.map((item: ResponsePackage) => ({
+        packageName: item.fields.packageName,
+        summaryPackage: item.fields.summaryPackage,
+        imageLink: item.fields.imageLink,
+        listMenu: item.fields.listMenu,
+        totalMenu: item.fields.listMenu?.length,
+      }));
+      setResponse(responseItems);
       setIsLoading(false);
     } catch (error) {
       console.log(error);
     }
   }
-
-  // function setThumbnail(){
-  //   const findId = response?.includes?.Asset[0].fields.
-  // }
 
   useEffect(() => {
     fetchProduct();
@@ -33,15 +39,14 @@ function ProductListSection() {
         <div className="grid grid-cols-1 gap-10 lg:gap-12 md:grid-cols-2 lg:grid-cols-3">
           {isloading
             ? "loading..."
-            : response?.map((packageItem: any, key: number) => {
-                console.log(packageItem);
+            : response?.map((packageItem: PackageProps, key: number) => {
                 return (
                   <ProductCard
                     key={key}
-                    title={packageItem.fields.packageName}
-                    description={packageItem.fields.summaryPackage}
-                    thumbnail={packageItem.fields.imageLink}
-                    totalMenu={packageItem.fields.listMenu.length}
+                    packageName={packageItem.packageName}
+                    summaryPackage={packageItem.summaryPackage}
+                    totalMenu={packageItem.totalMenu}
+                    imageLink={packageItem.imageLink}
                   />
                 );
               })}

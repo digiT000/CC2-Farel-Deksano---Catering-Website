@@ -2,21 +2,21 @@ import React from "react";
 import { PackageProps } from "@/utils/interface";
 
 function ProductCard({
-  thumbnail,
-  title,
-  description,
+  summaryPackage,
+  imageLink,
   totalMenu,
+  packageName,
 }: PackageProps) {
   return (
     <div className="flex flex-col gap-5">
       <img
         className="h-60 object-cover rounded-lg"
-        src={thumbnail}
-        alt={`Gambar ${title}`}
+        src={imageLink}
+        alt={`Gambar ${packageName}`}
       />
       <div>
-        <h3 className="text-2xl font-bold text-gray-950 mb-4">{title}</h3>
-        <p className="text-gray-700">{description}</p>
+        <h3 className="text-2xl font-bold text-gray-950 mb-4">{packageName}</h3>
+        <p className="text-gray-700">{summaryPackage}</p>
       </div>
       <div className="flex gap-5">
         <div className="flex items-center gap-2 px-3 py-1 bg-gray-100 rounded-md">

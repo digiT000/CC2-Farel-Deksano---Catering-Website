@@ -4,9 +4,14 @@ export interface MenuProps {
   description: string;
 }
 
+export interface ResponsePackage {
+  fields: PackageProps;
+}
+
 export interface PackageProps {
-  thumbnail: string;
-  title: string;
-  description: string;
+  imageLink: string;
+  packageName: string;
+  summaryPackage: string;
+  listMenu?: [];
   totalMenu: number;
 }
