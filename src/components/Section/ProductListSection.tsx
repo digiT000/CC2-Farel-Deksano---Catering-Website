@@ -5,7 +5,7 @@ import { fetchDataProduct } from "@/utils/api";
 function ProductListSection() {
   //const []
   const [isloading, setIsLoading] = useState<boolean>(true);
-  const [response, setResponse] = useState<any[]>();
+  const [response, setResponse] = useState<unknown[]>();
 
   async function fetchProduct() {
     try {

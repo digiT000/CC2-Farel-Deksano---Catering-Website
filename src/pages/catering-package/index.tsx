@@ -2,7 +2,6 @@ import CallToActionSection from "@/components/Section/CallToActionSection";
 import PageTemplate from "@/components/PageTemplate";
 import HeroSection from "@/components/Section/HeroSection";
 import ProductListSection from "@/components/Section/ProductListSection";
-HeroSection;
 
 import React from "react";
 

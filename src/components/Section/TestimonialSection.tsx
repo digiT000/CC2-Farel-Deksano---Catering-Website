@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import TestimonialItem from "../TestimonialItem";
 
 function TestimonialSection() {
-  const [swiper, setSwiper] = useState<any>(null);
+  const [swiper, setSwiper] = useState<SwiperClass | null>(null);
 
   const handleNextClick = () => {
     if (swiper) {
