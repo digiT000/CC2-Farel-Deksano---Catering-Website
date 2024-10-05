@@ -44,16 +44,16 @@ function NavLink({
           href={href}
           className={
             isActive
-              ? `px-3 py-1 flex flex-col gap-2 text-green-600`
-              : "px-3 py-1 flex flex-col gap-2 text-gray-700 hover:text-green-600 transition-colors"
+              ? `px-3 py-1 flex flex-col gap-2 text-green-600 font-semibold`
+              : "px-3 py-1 flex flex-col gap-2 text-gray-700 hover:text-green-600 transition-colors font-semibold"
           }
         >
           {linkName}
           <div
             className={
               isActive
-                ? "w-full h-1 rounded-full bg-green-600"
-                : "w-full h-1 rounded-full bg-green-600 opacity-0"
+                ? "w-full h-1 rounded-full bg-green-600 font-semibold"
+                : "w-full h-1 rounded-full bg-green-600 opacity-0 font-semibold"
             }
           ></div>
         </Link>

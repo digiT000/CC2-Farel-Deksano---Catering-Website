@@ -10,7 +10,7 @@ function Footer() {
             <Link className="text-center md:text-left" href={"/"}>
               <img className="mx-auto md:mx-0" src="/dummyLogo.svg" alt="" />
             </Link>
-            <p className="text-gray-700 text-center md:text-left">
+            <p className="text-gray-600 text-center md:text-left">
               Dibuat karena Kami peduli dengan para pejuang rupiah yang sering
               kali lupa menjaga makan karena sibuknya bekerja
             </p>

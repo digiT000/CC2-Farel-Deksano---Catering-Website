@@ -10,7 +10,7 @@ function Home() {
   return (
     <PageTemplate>
       <HeroSection>
-        <section className="bg-green-600 ">
+        <section className="bg-green-700 ">
           <div className="md:flex md:gap-10 md:flex-row-reverse md:items-center max-w-screen-xl mx-auto">
             <div className="md:min-h-[600px]">
               <img
@@ -49,10 +49,12 @@ function Home() {
       <SocialProofSection />
       <div className="px-4 mb-10">
         <div className="max-w-screen-xl mx-auto text-center mb-10">
-          <h2 className="text-2xl text-gray-950 font-bold mb-2">
+          <h2 className="text-2xl text-gray-950 font-bold mb-2 md:text-3xl">
             Pake Menu Makanan Kami
           </h2>
-          <p className="text-gray-700">Harga mulai dari Rp 339.000 per bulan</p>
+          <p className="text-gray-700 md:text-lg">
+            Harga mulai dari Rp 339.000 per bulan
+          </p>
         </div>
       </div>
       <ProductListSection />

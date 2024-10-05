@@ -11,7 +11,7 @@ function SocialProofSection() {
             description="Mempercayai Kami memenuhi asupan harian Mereka"
           />
           <SocialProofItem
-            image="/Makanan.svg"
+            image="/bowl-fill-white.svg"
             title="10.000+ Masakan sudah dibuat"
             description="Para koki Kami siap tempur buat makanan yang sehat untuk pejuang rupiah"
           />

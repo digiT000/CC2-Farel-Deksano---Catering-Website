@@ -16,7 +16,7 @@ function TestimonialItem({
       <p className="text-gray-950 mb-10">{description}</p>
       <div>
         <h3 className="text-gray-950 font-bold mb-1">{name}</h3>
-        <p className="text-gray-700 text-sm">{detailProfile}</p>
+        <p className="text-gray-600 text-sm">{detailProfile}</p>
       </div>
     </div>
   );

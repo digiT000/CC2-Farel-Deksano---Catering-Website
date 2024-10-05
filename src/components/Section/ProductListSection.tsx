@@ -32,7 +32,6 @@ function ProductListSection() {
     fetchProduct();
   }, []);
 
-  console.log("Response", response);
   return (
     <section className="px-4 mb-[120px]">
       <div className="max-w-screen-xl mx-auto">

@@ -9,7 +9,7 @@ function AboutUs() {
     <>
       <PageTemplate>
         <HeroSection>
-          <section className="bg-green-600 mb-[80px] lg:mb-[120px] bg-[url('/heroImage-AboutUs.png')] bg-cover bg-no-repeat bg-right px-4">
+          <section className="bg-green-700 mb-[80px] lg:mb-[120px] bg-[url('/heroImage-AboutUs.png')] bg-cover bg-no-repeat bg-right px-4">
             <div className="max-w-screen-xl mx-auto text-center text-white py-20">
               <div className="max-w-screen-md mx-auto">
                 <h1 className="text-3xl font-bold mb-7 md:text-5xl ">
@@ -30,7 +30,7 @@ function AboutUs() {
               <h1 className="text-3xl text-gray-950 font-bold mb-4 md:text-5xl ">
                 Berdiri sejak tahun 2004
               </h1>
-              <p className="text-gray-700 md:text-lg">
+              <p className="text-gray-600 md:text-lg">
                 Sudah melayani lebih dari{" "}
                 <strong className="text-green-600">500.000+</strong> pelanggan
                 dan <strong className="text-green-600">1.5 juta+</strong>{" "}
@@ -58,10 +58,10 @@ function AboutUs() {
         </section>
         <section className="bg-green-800 px-4 mb-20 lg:mb-[120px]">
           <div className="py-16 text-white max-w-screen-lg mx-auto md:py-24">
-            <h3 className="text-lg font-bold mb-6 md:text-2xl">
+            <h3 className="text-lg font-bold mb-6 md:text-xl">
               Dibagung katering ini karena kami percaya...
             </h3>
-            <p className="text-xl leading-[155%] font-normal md:text-3xl ">
+            <p className="text-xl leading-[155%] md:text-3xl ">
               Untuk mencapai tujuan sekecil apapun, kita membutuhkan dukungan
               yang optimal. Salah satunya adalah tubuh yang sehat yang didukung
               oleh asupan nutrisi yang cukup. Walaupun ada anggapan bahwa

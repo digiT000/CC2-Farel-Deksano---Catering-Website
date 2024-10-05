@@ -22,15 +22,21 @@ function TestimonialSection() {
   return (
     <section className="px-4 mb-20 md:mb-[120px]">
       <div className="max-w-screen-xl mx-auto">
-        <div className=" lg:flex lg:items-center lg:justify-between">
-          <h2 className="text-2xl font-bold text-gray-950 mb-10">
+        <div className=" lg:flex lg:items-center lg:justify-between md:mb-10">
+          <h2 className="text-2xl font-bold text-gray-950 mb-10 md:text-3xl md:mb-0">
             Pejuang Rupiah yang puas dengan Katering Kami
           </h2>
-          <div className="hidden items-center justify-center gap-5 lg:flex ">
-            <a className="p-3" onClick={handlePrevClick}>
+          <div className="hidden items-center justify-center gap-5 md:flex ">
+            <a
+              className="p-3 cursor-pointer rounded-full hover:bg-gray-50 transition-all"
+              onClick={handlePrevClick}
+            >
               <img src="/arrow-left-line.svg" alt="icon-arrow" />
             </a>
-            <a className="p-3" onClick={handleNextClick}>
+            <a
+              className="p-3 cursor-pointer rounded-full hover:bg-gray-50 transition-all"
+              onClick={handleNextClick}
+            >
               <img src="/arrow-right-line.svg" alt="icon-arrow" />
             </a>
           </div>

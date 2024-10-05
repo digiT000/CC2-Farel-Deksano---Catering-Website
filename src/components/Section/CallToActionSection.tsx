@@ -28,7 +28,7 @@ function CallToActionSection({
             <h2 className="text-2xl font-bold text-gray-950 mb-5 md:text-3xl">
               {title}
             </h2>
-            <p className="text-gray-800 mb-8 md:text-lg">{description}</p>
+            <p className="text-gray-600 mb-8 md:text-lg">{description}</p>
             <Button
               buttonText={callToActionText}
               buttonType="primary"
