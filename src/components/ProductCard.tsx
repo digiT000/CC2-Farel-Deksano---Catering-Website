@@ -6,7 +6,6 @@ function ProductCard({
   title,
   description,
   totalMenu,
-  location,
 }: PackageProps) {
   return (
     <div className="flex flex-col gap-5">
@@ -28,16 +27,6 @@ function ProductCard({
           />
           <span className="text-sm text-gray-950 font-medium">
             {totalMenu} Menu
-          </span>
-        </div>
-        <div className="flex items-center gap-2 px-3 py-1 bg-gray-100 rounded-md">
-          <img
-            className="fill-orange-600 w-6 h-6"
-            src="/Makanan.svg"
-            alt="Menu"
-          />
-          <span className="text-sm text-gray-950 font-medium">
-            {location} Lokasi
           </span>
         </div>
       </div>

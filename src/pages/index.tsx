@@ -3,7 +3,7 @@ import HeroSection from "@/components/Section/HeroSection";
 import Button from "@/components/Button";
 import SocialProofSection from "@/components/Section/SocialProofSection";
 import ProductListSection from "@/components/Section/ProductListSection";
-import TestimonialSection from "@/components/TestimonialSection";
+import TestimonialSection from "@/components/Section/TestimonialSection";
 import PageTemplate from "@/components/PageTemplate";
 
 function Home() {

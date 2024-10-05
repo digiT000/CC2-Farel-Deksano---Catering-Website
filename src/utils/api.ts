@@ -6,5 +6,6 @@ export async function fetchDataProduct(env: string) {
   const response = await axios.get(
     `/spaces/2gchvvxde1g0/environments/master/entries?access_token=${ACCESS_TOKEN}`
   );
+  console.log(response);
   return response.data;
 }

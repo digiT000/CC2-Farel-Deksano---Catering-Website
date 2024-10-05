@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import CallToActionSection from "@/components/Section/CallToActionSection";
 import PageTemplate from "@/components/PageTemplate";
 import HeroSection from "@/components/Section/HeroSection";
 import ProductListSection from "@/components/Section/ProductListSection";
@@ -44,6 +45,12 @@ function CateringPackage() {
         </div>
       </div>
       <ProductListSection />
+      <CallToActionSection
+        title="Bingung harus pilih pake yang mana?"
+        description="Langsung aja hubungi Kami untuk konsultasi, supaya asupan Kamu sepenuhnya terpenuhi"
+        callToActionText="Konsultasi Sekarang"
+        image="/cateringPackage-CTA.jpg"
+      />
     </PageTemplate>
   );
 }

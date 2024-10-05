@@ -12,22 +12,22 @@ function ProductListSection() {
     try {
       const response = await fetchDataProduct("master");
 
-      setResponse(response);
+      setResponse(response.items);
       setIsLoading(false);
     } catch (error) {
       console.log(error);
     }
   }
 
-  function setThumbnail(){
-    const findId = response?.includes?.Asset[0].fields.
-  }
+  // function setThumbnail(){
+  //   const findId = response?.includes?.Asset[0].fields.
+  // }
 
   useEffect(() => {
     fetchProduct();
   }, []);
 
-  console.log(response);
+  console.log("Response", response);
   return (
     <section className="px-4 mb-[120px]">
       <div className="max-w-screen-xl mx-auto">
@@ -38,11 +38,11 @@ function ProductListSection() {
                 console.log(packageItem);
                 return (
                   <ProductCard
-                    title=""
-                    description="a"
-                    thumbnail="a"
-                    totalMenu={12}
-                    location={12}
+                    title={packageItem.fields.packageName}
+                    description={packageItem.fields.summaryPackage}
+                    thumbnail={packageItem.fields.imageLink}
+                    totalMenu={packageItem.fields.listMenu.length}
+                    location={packageItem.fields.listLocation.length}
                   />
                 );
               })}

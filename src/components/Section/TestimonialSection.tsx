@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
-import TestimonialItem from "./TestimonialItem";
+import TestimonialItem from "../TestimonialItem";
 
 function TestimonialSection() {
   const [swiper, setSwiper] = useState<any>(null);

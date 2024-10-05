@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        "heroImage-aboutUs": "url('/heroImage-AboutUs.webp')",
+      },
     },
   },
   plugins: [],
