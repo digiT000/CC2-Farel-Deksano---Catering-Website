@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ChangeEventHandler, useState } from "react";
 import { usePathname } from "next/navigation"; // Untuk mengetahui current pathname yang sedang aktif
 import NavLink from "./NavLink";
 import NavigationMobile from "./NavigationMobile";
@@ -6,7 +6,6 @@ import { useLanguage } from "@/context/languageContext";
 
 function NavigationBar() {
   // To control the language
-  const [active, setActive] = useState();
   const { language, changeLanguage } = useLanguage();
   const pathname = usePathname(); // will return /about-us --> if the user in the about us page
 
@@ -51,7 +50,9 @@ function NavigationBar() {
               name="language"
               id="language"
               value={language}
-              onChange={(e: any) => changeLanguage(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                changeLanguage(e.target.value)
+              }
             >
               <option value="id">Indonesia</option>
               <option value="en">English</option>
