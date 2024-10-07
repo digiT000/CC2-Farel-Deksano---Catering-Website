@@ -1,5 +1,5 @@
 import { MenuItemProps, ListMenuProps } from "@/utils/interface";
-import MenuItem from "./menuItem";
+import MenuItem from "./MenuItem";
 
 function ListMenu({ menus }: ListMenuProps) {
   return (
