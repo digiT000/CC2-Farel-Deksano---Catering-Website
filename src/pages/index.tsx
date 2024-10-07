@@ -1,45 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroSection from "@/components/Section/HeroSection";
 import Button from "@/components/Button";
 import SocialProofSection from "@/components/Section/SocialProofSection";
 import ProductListSection from "@/components/Section/ProductListSection";
 import TestimonialSection from "@/components/Section/TestimonialSection";
 import PageTemplate from "@/components/PageTemplate";
+import { useLanguage } from "@/context/languageContext";
+import { languageData } from "@/language/homepageLanguage";
 
 function Home() {
+  const { language } = useLanguage();
+  const localization = languageData[language];
+  console.log(localization);
+
   return (
     <PageTemplate>
       <HeroSection>
         <section className="bg-green-700 ">
           <div className="md:flex md:gap-10 md:flex-row-reverse md:items-center max-w-screen-xl mx-auto">
-            <div className="md:min-h-[600px]">
+            <div className="md:max-w-full md:max-h-full md:h-auto md:w-[750px] aspect-square">
               <img
-                className="object-cover md:min-h-[600px] "
+                className="object-cover h-full"
                 src="/heroImage.webp"
                 alt=""
               />
             </div>
 
-            <div className="py-10 px-4 ">
+            <div className=" px-4 ">
               <h1 className="text-3xl text-white font-bold mb-4 lg:text-5xl ">
-                <span className="text-lime-400">4 sehat 5 sempurna</span> untuk
-                pejuang rupiah
+                {localization.HeroSection.title()}
               </h1>
               <p className="text-white mb-10 lg:text-lg">
-                Ratusan menu makanan yang bebas Kamu pilih untuk menemani makan
-                Kamu setiap harinya
+                {localization.HeroSection.subtitle}
               </p>
 
               <div className="flex flex-col gap-5 lg:flex-row">
                 <Button
                   buttonType="primary"
                   onClick={() => console.log("click")}
-                  buttonText="Langganan Katering"
+                  buttonText={localization.HeroSection.buttonPrimary}
                 />
                 <Button
                   buttonType="secondary"
                   onClick={() => console.log("click")}
-                  buttonText="Lihat Paket Menu"
+                  buttonText={localization.HeroSection.buttonSecondary}
                 />
               </div>
             </div>

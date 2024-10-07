@@ -9,3 +9,12 @@ export async function fetchDataProduct() {
   console.log(response);
   return response.data;
 }
+
+export async function fetchSingleProduct(
+  packageId: string | string[] | undefined
+) {
+  const response = await axios.get(
+    `/spaces/2gchvvxde1g0/environments/master/entries/${packageId}?access_token=${ACCESS_TOKEN}`
+  );
+  return response.data;
+}
