@@ -7,7 +7,7 @@ function ListMenu({ menus }: ListMenuProps) {
       {menus?.map((menuItem: MenuItemProps, key: number) => {
         return (
           <MenuItem
-            key={}
+            key={key}
             image={menuItem.image}
             menuName={menuItem.menuName}
             description={menuItem.description}

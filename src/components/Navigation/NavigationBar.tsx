@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, useState } from "react";
+import React, { useState } from "react";
 import { usePathname } from "next/navigation"; // Untuk mengetahui current pathname yang sedang aktif
 import NavLink from "./NavLink";
 import NavigationMobile from "./NavigationMobile";
