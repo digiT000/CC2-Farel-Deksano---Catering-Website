@@ -7,7 +7,6 @@ function ProductCard({
   imageLink,
   summaryPackage,
   totalMenu,
-  listMenu,
   onClick,
 }: PackageProps) {
   return (

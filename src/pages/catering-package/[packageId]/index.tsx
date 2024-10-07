@@ -37,7 +37,7 @@ export default function PackageDetail() {
   console.log("List Menu:", product?.listMenu);
 
   return (
-    <main>
+    <PageTemplate>
       <section className="px-4">
         <div className="max-w-screen-lg mx-auto ">
           <div className="grid grid-cols-3 gap-5">
@@ -79,6 +79,6 @@ export default function PackageDetail() {
           </div>
         </div>
       </section>
-    </main>
+    </PageTemplate>
   );
 }
