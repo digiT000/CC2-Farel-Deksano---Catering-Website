@@ -36,7 +36,7 @@ function TestimonialSection({
           <h2 className="text-2xl font-bold text-gray-950 mb-10 md:text-3xl md:mb-0">
             {header}
           </h2>
-          <div className="hidden items-center justify-center gap-5 md:flex ">
+          <div className="hidden items-center justify-center gap-5 lg:flex ">
             <a
               className="p-3 cursor-pointer rounded-full hover:bg-gray-50 transition-all"
               onClick={handlePrevClick}

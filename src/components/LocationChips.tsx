@@ -5,6 +5,8 @@ interface LocationProps {
   detailLocation: string;
   mapURL: string;
   whatsappURL: string;
+  mapButtonText: string;
+  contactButtonText: string;
 }
 
 function LocationChips({
@@ -12,6 +14,8 @@ function LocationChips({
   detailLocation,
   mapURL,
   whatsappURL,
+  mapButtonText,
+  contactButtonText,
 }: LocationProps) {
   return (
     <div className="p-5 snap-center md:p-6 border-l-4 border-l-green-600">
@@ -32,7 +36,9 @@ function LocationChips({
           href={mapURL}
         >
           <img className="w-5 h-5" src="/map.svg" alt="Map Icon" />
-          <span className="font-medium text-gray-950 text-sm">Lihat Map</span>
+          <span className="font-medium text-gray-950 text-sm">
+            {mapButtonText}
+          </span>
         </a>
         <a
           target="_blank"
@@ -41,7 +47,7 @@ function LocationChips({
         >
           <img className="w-5 h-5" src="/whatsapp.svg" alt="Whatsapp Icon" />
           <span className="font-medium text-gray-950 text-sm">
-            Hubungi Kami
+            {contactButtonText}
           </span>
         </a>
       </div>
