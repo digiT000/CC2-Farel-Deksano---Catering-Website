@@ -72,6 +72,7 @@ function AboutUs() {
         </section>
         <OurLocationSection />
         <CallToActionSection
+          callToActionToWhere="https://api.whatsapp.com/"
           title="Yuk daftar langganan di katering Kami"
           description="Daftar sekarang dan dapatkan promo untuk pendaftaran pertama kali."
           callToActionText="Daftar Langganan"
