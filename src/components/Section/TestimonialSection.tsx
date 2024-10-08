@@ -68,9 +68,8 @@ function TestimonialSection({ testimonailList }: TestimonialSectionProps) {
           >
             {testimonailList.map((item: TestimonialProps, key: number) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={key}>
                   <TestimonialItem
-                    key={key}
                     name={item.name}
                     description={item.description}
                     detailProfile={item.detailProfile}

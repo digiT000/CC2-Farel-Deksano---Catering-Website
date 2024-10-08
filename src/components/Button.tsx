@@ -13,7 +13,6 @@ interface ButtonProps {
 function Button({
   isButton,
   toWhere,
-  props,
   buttonType,
   buttonText,
   onClick,
