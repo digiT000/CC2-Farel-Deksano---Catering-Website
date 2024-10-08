@@ -3,6 +3,7 @@ import OurLocationSection from "@/components/Section/OurLocationSection";
 import PageTemplate from "@/components/PageTemplate";
 import HeroSection from "@/components/Section/HeroSection";
 import React from "react";
+import Image from "next/image";
 
 function AboutUs() {
   return (
@@ -40,17 +41,17 @@ function AboutUs() {
             <div className=" grid gap-2 grid-cols-3 min-h-[250px] md:min-h-[400px] ">
               <img
                 className="w-full h-full object-cover md:rounded-tl-md md:rounded-tr-md"
-                src="/aboutUs-image-1.png"
+                src="/aboutUs-image-1.webp"
                 alt=""
               />
               <img
                 className="w-full h-full object-cover  md:rounded-tl-md md:rounded-tr-md"
-                src="/aboutUs-image-2.png"
+                src="/aboutUs-image-2.webp"
                 alt=""
               />
               <img
                 className="w-full h-full object-cover  md:rounded-tl-md md:rounded-tr-md"
-                src="/aboutUs-image-3.png"
+                src="/aboutUs-image-3.webp"
                 alt=""
               />
             </div>
@@ -76,7 +77,7 @@ function AboutUs() {
           title="Yuk daftar langganan di katering Kami"
           description="Daftar sekarang dan dapatkan promo untuk pendaftaran pertama kali."
           callToActionText="Daftar Langganan"
-          image="/aboutUs-CTA.jpg"
+          image="/aboutUs-CTA.webp"
         />
       </PageTemplate>
     </>

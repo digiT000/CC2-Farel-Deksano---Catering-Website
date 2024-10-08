@@ -8,12 +8,7 @@ export interface LanguageDataHomepage {
       buttonPrimary: string;
       buttonSecondary: string;
     };
-    socialProofSection: {
-      proof_1: SocialProofProps;
-      proof_2: SocialProofProps;
-      proof_3: SocialProofProps;
-      // ... sisanya
-    };
+    socialProofSection: SocialProofProps[];
     listPackageSection: {
       title: string;
       description: string;
@@ -62,21 +57,24 @@ export const languageData: LanguageDataHomepage = {
       buttonSecondary: "Lihat Paket Menu",
     },
 
-    socialProofSection: {
-      proof_1: {
+    socialProofSection: [
+      {
+        image: "/Pekerja.svg",
         title: "5000+ Pekerja",
         description: "Mempercayai Kami memenuhi asupan harian Mereka",
       },
-      proof_2: {
+      {
+        image: "/bowl-fill-white.svg",
         title: "10.000+ Masakan sudah dibuat",
         description:
           "Para koki Kami siap tempur buat makanan yang sehat untuk pejuang rupiah",
       },
-      proof_3: {
+      {
+        image: "/Restoran.svg",
         title: "Tersedia di 15 Lokasi",
         description: "Menjangkau lebih banyak pekerja agar lebih sehat sentosa",
       },
-    },
+    ],
     listPackageSection: {
       title: "Paket Menu Makanan Kami",
       description: "Harga mulai dari Rp 339.000 per bulan",
@@ -174,20 +172,23 @@ export const languageData: LanguageDataHomepage = {
         detailProfile: "Homemaker who also works in an office in East Jakarta",
       },
     ],
-    socialProofSection: {
-      proof_1: {
+    socialProofSection: [
+      {
+        image: "/Pekerja.svg",
         title: "Trusted by 5,000+ Workers",
         description: "They trust us to fuel their day.",
       },
-      proof_2: {
+      {
+        image: "/bowl-fill-white.svg",
         title: "10,000+ Meals Prepared",
         description:
           "Our chefs are ready to cook up healthy meals for hardworking individuals.",
       },
-      proof_3: {
+      {
+        image: "/Restoran.svg",
         title: "Available in 15+ Locations",
         description: "Reaching more workers to help them live healthier lives.",
       },
-    },
+    ],
   },
 };

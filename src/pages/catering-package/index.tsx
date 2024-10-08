@@ -48,7 +48,7 @@ function CateringPackage() {
         title="Bingung harus pilih pake yang mana?"
         description="Langsung aja hubungi Kami untuk konsultasi, supaya asupan Kamu sepenuhnya terpenuhi"
         callToActionText="Konsultasi Sekarang"
-        image="/cateringPackage-CTA.jpg"
+        image="/cateringPackage-CTA.webp"
       />
     </PageTemplate>
   );
