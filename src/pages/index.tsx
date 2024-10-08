@@ -8,7 +8,6 @@ import PageTemplate from "@/components/PageTemplate";
 import { useLanguage } from "@/context/languageContext";
 import { languageData } from "@/language/homepageLanguage";
 import { LanguageDataHomepage } from "@/language/homepageLanguage";
-import Document from "@/components/Document";
 import Header from "@/components/Header";
 
 function Home() {

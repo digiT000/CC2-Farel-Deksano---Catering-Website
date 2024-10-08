@@ -3,7 +3,6 @@ import OurLocationSection from "@/components/Section/OurLocationSection";
 import PageTemplate from "@/components/PageTemplate";
 import HeroSection from "@/components/Section/HeroSection";
 import React from "react";
-import Image from "next/image";
 
 function AboutUs() {
   return (
