@@ -4,14 +4,22 @@ import { fetchSingleProduct } from "@/utils/api";
 import { PackageProps } from "@/utils/interface";
 import PageTemplate from "@/components/PageTemplate";
 import ListMenu from "@/components/ListMenu";
+import Image from "next/image";
+import Button from "@/components/Button";
 
 export default function PackageDetail() {
   const router = useRouter();
-  console.log("Router", router.query);
   const { packageId } = router.query;
-  console.log(typeof packageId);
 
-  const [product, setProduct] = useState<PackageProps | null>(null);
+  const [product, setProduct] = useState<PackageProps>({
+    id: "",
+    imageLink: "",
+    packageName: "",
+    summaryPackage: "",
+    listMenu: [],
+    totalMenu: 0,
+    mainImage: "",
+  });
   // console.log(packageId);
 
   async function fetchProduct(packageId: string | string[] | undefined) {
@@ -24,6 +32,7 @@ export default function PackageDetail() {
         summaryPackage: dataProduct.fields.summaryPackage,
         listMenu: dataProduct.fields.listMenu,
         totalMenu: dataProduct.fields.listMenu.length,
+        mainImage: dataProduct.fields.mainImage,
       });
     } catch (error) {
       console.log(error);
@@ -38,44 +47,58 @@ export default function PackageDetail() {
 
   return (
     <PageTemplate>
-      <section className="px-4">
+      <section className="px-4 py-8">
         <div className="max-w-screen-lg mx-auto ">
-          <div className="grid grid-cols-3 gap-5">
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-          </div>
-
-          <div className="grid grid-cols-1 gap-8">
-            <div className="col-span-2 flex flex-col gap-8">
-              <div className="flex flex-col gap-4">
-                <h1 className="text-3xl text-gray-950 font-bold">
-                  {product?.packageName}
-                </h1>
-                <p className=" text-gray-700">{product?.summaryPackage}</p>
-              </div>
-
-              <div className="flex flex-col gap-2 p-4 bg-gray-50 rounded-md">
-                <h3 className="text-xl text-gray-950 font-bold">Daftar Menu</h3>
-                <p className=" text-gray-700">
-                  Terdapat{" "}
-                  <span className="font-semibold">
-                    {product?.totalMenu} menu{" "}
-                  </span>
-                  didalam paket ini
-                </p>
-                <ListMenu menus={product?.listMenu} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="flex flex-col gap-5 md:h-fit md:sticky md:top-20">
+              <Image
+                src={product.mainImage}
+                width={1024}
+                height={600}
+                alt="tes"
+                className="w-full object-cover rounded-md"
+              />
+              <h1 className="text-2xl text-gray-950 font-bold">
+                {product?.packageName}
+              </h1>
+              <p className=" text-gray-700 md:text-lg">
+                {product?.summaryPackage}
+              </p>
+              <div className="bg-green-50 p-4 rounded-lg md:flex md:justify-between md:items-center">
+                <div>
+                  <p className="text-sm text-gray-700 mb-2 md:text-base">
+                    Harga paket hanya
+                  </p>
+                  <h2 className="text-2xl font-bold text-green-600 mb-4">
+                    Rp219.000{" "}
+                    <span className="text-sm font-semibold">/bulan</span>{" "}
+                  </h2>
+                </div>
+                <Button
+                  isButton={false}
+                  toWhere="https://wa.me/"
+                  props={product?.id}
+                  buttonText="Langganan Paket"
+                  buttonType="primary"
+                  onClick={() => {
+                    console.log("click");
+                  }}
+                />
               </div>
             </div>
-            {/* Side Bar */}
-            {/* <div className="p-5 bg-green-50 rounded-md">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                eius quod possimus numquam perferendis officiis laborum error
-                modi et a, tempore cumque aspernatur, incidunt optio,
-                reprehenderit laudantium porro beatae deleniti.
+            <div className="flex flex-col gap-2 p-4 bg-gray-50 rounded-md">
+              <h3 className="text-xl text-gray-950 font-bold md:text-2xl">
+                Daftar Menu
+              </h3>
+              <p className=" text-gray-700">
+                Terdapat{" "}
+                <span className="font-semibold">
+                  {product?.totalMenu} menu{" "}
+                </span>
+                didalam paket ini
               </p>
-            </div> */}
+              <ListMenu menus={product?.listMenu} />
+            </div>
           </div>
         </div>
       </section>

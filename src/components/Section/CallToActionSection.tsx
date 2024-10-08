@@ -5,11 +5,13 @@ interface CallToActionProps {
   title: string;
   description: string;
   callToActionText: string;
+  callToActionToWhere: string;
   image: string;
 }
 
 function CallToActionSection({
   callToActionText,
+  callToActionToWhere,
   description,
   image,
   title,
@@ -30,6 +32,8 @@ function CallToActionSection({
             </h2>
             <p className="text-gray-600 mb-8 md:text-lg">{description}</p>
             <Button
+              isButton={false}
+              toWhere={callToActionToWhere}
               buttonText={callToActionText}
               buttonType="primary"
               onClick={() => console.log("click")}

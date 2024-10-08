@@ -1,3 +1,5 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 export interface MenuProps {
   image: string;
   menuName: string;
@@ -13,7 +15,7 @@ export interface ResponsePackage {
 
 export interface PackageProps {
   id: string;
-
+  mainImage: StaticImport | string;
   imageLink: string;
   packageName: string;
   summaryPackage: string;
@@ -23,6 +25,7 @@ export interface PackageProps {
 }
 
 export interface MenuItemProps {
+  number: number;
   image: string;
   menuName: string;
   description: string;
@@ -30,4 +33,16 @@ export interface MenuItemProps {
 
 export interface ListMenuProps {
   menus: MenuItemProps[] | undefined;
+}
+
+export interface TestimonialProps {
+  description: string;
+  name: string;
+  detailProfile: string;
+}
+
+export interface SocialProofProps {
+  image?: string;
+  title: string;
+  description: string;
 }

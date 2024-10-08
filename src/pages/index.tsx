@@ -7,11 +7,13 @@ import TestimonialSection from "@/components/Section/TestimonialSection";
 import PageTemplate from "@/components/PageTemplate";
 import { useLanguage } from "@/context/languageContext";
 import { languageData } from "@/language/homepageLanguage";
+import { LanguageDataHomepage } from "@/language/homepageLanguage";
 
 function Home() {
   const { language } = useLanguage();
-  const localization = languageData[language];
-  console.log(localization);
+  const localization: LanguageDataHomepage[string] = languageData[language];
+  console.log(languageData["id"]);
+  console.log("List :", localization.testimonialSection);
 
   return (
     <PageTemplate>
@@ -36,11 +38,15 @@ function Home() {
 
               <div className="flex flex-col gap-5 lg:flex-row">
                 <Button
+                  isButton={false}
+                  toWhere="https://wa.me/"
                   buttonType="primary"
                   onClick={() => console.log("click")}
                   buttonText={localization.HeroSection.buttonPrimary}
                 />
                 <Button
+                  isButton={false}
+                  toWhere="https://wa.me/"
                   buttonType="secondary"
                   onClick={() => console.log("click")}
                   buttonText={localization.HeroSection.buttonSecondary}
@@ -62,7 +68,7 @@ function Home() {
         </div>
       </div>
       <ProductListSection />
-      <TestimonialSection />
+      <TestimonialSection testimonailList={localization.testimonialSection} />
     </PageTemplate>
   );
 }

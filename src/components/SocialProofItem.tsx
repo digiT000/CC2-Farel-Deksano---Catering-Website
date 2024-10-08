@@ -1,9 +1,5 @@
 import React from "react";
-interface SocialProofProps {
-  image: string;
-  title: string;
-  description: string;
-}
+import { SocialProofProps } from "@/utils/interface";
 
 function SocialProofItem({ image, title, description }: SocialProofProps) {
   return (

@@ -21,7 +21,7 @@ function NavigationBar() {
       <header className="px-4 sticky top-0 bg-white z-50">
         <div className="container py-3 flex items-center justify-between mx-auto">
           <img src="/dummyLogo.svg" alt="Logo Katering" />
-          <nav className="gap-1 hidden sm:flex">
+          <nav className="gap-1 hidden sm:flex sm:items-center">
             <NavLink
               device="desktop"
               linkName="Home"
@@ -40,23 +40,22 @@ function NavigationBar() {
               isActive={pathname === "/about-us"}
               href="/about-us"
             />
-            <NavLink
-              device="desktop"
-              linkName="Resep Komunitas"
-              isActive={pathname === "/resep-komunitas"}
-              href="/resep-komunitas"
-            />
-            <select
-              name="language"
-              id="language"
-              value={language}
-              onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                changeLanguage(e.target.value)
-              }
-            >
-              <option value="id">Indonesia</option>
-              <option value="en">English</option>
-            </select>
+
+            <div className="px-3 py-1 flex flex-col gap-2 text-gray-950 text-sm font-medium">
+              <select
+                className="border border-gray-200 px-2 py-1 rounded-md "
+                name="language"
+                id="language"
+                value={language}
+                onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                  changeLanguage(e.target.value)
+                }
+              >
+                <option value="id">Indonesia</option>
+                <option value="en">English</option>
+              </select>
+              <div className="w-full h-1 rounded-full bg-green-600 opacity-0"></div>
+            </div>
           </nav>
           <nav className="sm:hidden">
             <button onClick={toggleMenu} className="p-1 ">

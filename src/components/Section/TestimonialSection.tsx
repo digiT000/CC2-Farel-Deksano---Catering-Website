@@ -4,9 +4,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import TestimonialItem from "../TestimonialItem";
+import { TestimonialProps } from "@/utils/interface";
 
-function TestimonialSection() {
+interface TestimonialSectionProps {
+  testimonailList: TestimonialProps[];
+}
+
+function TestimonialSection({ testimonailList }: TestimonialSectionProps) {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
+  console.log("list:", testimonailList);
 
   const handleNextClick = () => {
     if (swiper) {
@@ -60,41 +66,18 @@ function TestimonialSection() {
               },
             }}
           >
-            <SwiperSlide>
-              <TestimonialItem
-                name="Farel Darari Deksano"
-                description="Super duper puas ama kateringRupiah, mesen paket yang tinggi protein udah jalan 3 bulan. Gak pernah gagal dari rasa dan porsinya."
-                detailProfile="Perjuang rupiah daerah Jakarta Selatan"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <TestimonialItem
-                name="Farel Darari Deksano"
-                description="Super duper puas ama kateringRupiah, mesen paket yang tinggi protein udah jalan 3 bulan. Gak pernah gagal dari rasa dan porsinya."
-                detailProfile="Perjuang rupiah daerah Jakarta Selatan"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <TestimonialItem
-                name="Adityas"
-                description="Super duper puas ama kateringRupiah, mesen paket yang tinggi protein udah jalan 3 bulan. Gak pernah gagal dari rasa dan porsinya."
-                detailProfile="Perjuang rupiah daerah Jakarta Selatan"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <TestimonialItem
-                name="Adityas"
-                description="Super duper puas ama kateringRupiah, mesen paket yang tinggi protein udah jalan 3 bulan. Gak pernah gagal dari rasa dan porsinya."
-                detailProfile="Perjuang rupiah daerah Jakarta Selatan"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <TestimonialItem
-                name="Adityas"
-                description="Super duper puas ama kateringRupiah, mesen paket yang tinggi protein udah jalan 3 bulan. Gak pernah gagal dari rasa dan porsinya."
-                detailProfile="Perjuang rupiah daerah Jakarta Selatan"
-              />
-            </SwiperSlide>
+            {testimonailList.map((item: TestimonialProps, key: number) => {
+              return (
+                <SwiperSlide>
+                  <TestimonialItem
+                    key={key}
+                    name={item.name}
+                    description={item.description}
+                    detailProfile={item.detailProfile}
+                  />
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
         <div className="flex items-center justify-center gap-5 lg:hidden">

@@ -8,6 +8,7 @@ function ListMenu({ menus }: ListMenuProps) {
         return (
           <MenuItem
             key={key}
+            number={key + 1}
             image={menuItem.image}
             menuName={menuItem.menuName}
             description={menuItem.description}

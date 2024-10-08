@@ -1,10 +1,5 @@
 import React from "react";
-
-interface TestimonialProps {
-  description: string;
-  name: string;
-  detailProfile: string;
-}
+import { TestimonialProps } from "@/utils/interface";
 
 function TestimonialItem({
   description,
