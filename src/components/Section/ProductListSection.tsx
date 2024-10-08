@@ -57,6 +57,7 @@ function ProductListSection() {
                 console.log("item:", packageItem);
                 return (
                   <ProductCard
+                    mainImage="none"
                     key={key}
                     id={packageItem.id}
                     packageName={packageItem.packageName}
