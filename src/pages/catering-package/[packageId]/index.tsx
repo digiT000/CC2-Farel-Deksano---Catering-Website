@@ -6,11 +6,13 @@ import PageTemplate from "@/components/PageTemplate";
 import ListMenu from "@/components/ListMenu";
 import Image from "next/image";
 import Button from "@/components/Button";
+import ProductDetailLoading from "./loading";
 
 export default function PackageDetail() {
   const router = useRouter();
   const { packageId } = router.query;
 
+  const [isLoading, setLoading] = useState<boolean>(true);
   const [product, setProduct] = useState<PackageProps>({
     id: "",
     imageLink: "",
@@ -34,6 +36,8 @@ export default function PackageDetail() {
         totalMenu: dataProduct.fields.listMenu.length,
         mainImage: dataProduct.fields.mainImage,
       });
+
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -45,7 +49,9 @@ export default function PackageDetail() {
 
   console.log("List Menu:", product?.listMenu);
 
-  return (
+  return isLoading ? (
+    <ProductDetailLoading></ProductDetailLoading>
+  ) : (
     <PageTemplate>
       <section className="px-4 py-8">
         <div className="max-w-screen-lg mx-auto ">
