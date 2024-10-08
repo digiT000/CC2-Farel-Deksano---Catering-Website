@@ -42,7 +42,7 @@ export interface TestimonialProps {
 }
 
 export interface SocialProofProps {
-  image?: string;
+  image: StaticImport | string;
   title: string;
   description: string;
 }

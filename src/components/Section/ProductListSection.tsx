@@ -3,6 +3,7 @@ import ProductCard from "../ProductCard";
 import { fetchDataProduct } from "@/utils/api";
 import { PackageProps, ResponsePackage } from "@/utils/interface";
 import { useRouter } from "next/navigation";
+import ClipLoader from "react-spinners/ClipLoader";
 
 function ProductListSection() {
   const router = useRouter();
@@ -51,25 +52,29 @@ function ProductListSection() {
     <section className="px-4 mb-[120px]">
       <div className="max-w-screen-xl mx-auto">
         <div className="grid grid-cols-1 gap-10 lg:gap-12 md:grid-cols-2 lg:grid-cols-3">
-          {isloading
-            ? "loading..."
-            : response?.map((packageItem: PackageProps, key: number) => {
-                console.log("item:", packageItem);
-                return (
-                  <ProductCard
-                    mainImage="none"
-                    key={key}
-                    id={packageItem.id}
-                    packageName={packageItem.packageName}
-                    summaryPackage={packageItem.summaryPackage}
-                    imageLink={packageItem.imageLink}
-                    totalMenu={packageItem.totalMenu}
-                    onClick={() => {
-                      console.log(redirect(packageItem.id));
-                    }}
-                  />
-                );
-              })}
+          {isloading ? (
+            <div className="w-sreen h-60 flex justify-center items-center p-10 col-span-3">
+              <ClipLoader color="#15803d" speedMultiplier={1} size={100} />
+            </div>
+          ) : (
+            response?.map((packageItem: PackageProps, key: number) => {
+              console.log("item:", packageItem);
+              return (
+                <ProductCard
+                  mainImage="none"
+                  key={key}
+                  id={packageItem.id}
+                  packageName={packageItem.packageName}
+                  summaryPackage={packageItem.summaryPackage}
+                  imageLink={packageItem.imageLink}
+                  totalMenu={packageItem.totalMenu}
+                  onClick={() => {
+                    console.log(redirect(packageItem.id));
+                  }}
+                />
+              );
+            })
+          )}
         </div>
       </div>
     </section>

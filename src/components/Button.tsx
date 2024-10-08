@@ -35,7 +35,7 @@ function Button({
             href={{
               pathname: toWhere,
             }}
-            className="p-3 bg-lime-400  font-bold hover:bg-lime-300 transition-colors text-gray-950 rounded-sm w-full h-fit md:w-fit"
+            className="p-3 bg-lime-400  font-bold hover:bg-lime-300 transition-colors text-gray-950 rounded-sm w-full h-fit md:w-fit text-center"
           >
             {buttonText}
           </Link>
@@ -59,7 +59,7 @@ function Button({
             href={{
               pathname: toWhere,
             }}
-            className="p-3 bg-transparent  font-bold border border-white hover:bg-lime-50 hover:text-gray-950 transition-colors text-white rounded-sm w-full h-fit md:w-fit "
+            className="p-3 bg-transparent  font-bold border border-white hover:bg-lime-50 hover:text-gray-950 transition-colors text-white rounded-sm w-full h-fit md:w-fit text-center"
           >
             {buttonText}
           </Link>

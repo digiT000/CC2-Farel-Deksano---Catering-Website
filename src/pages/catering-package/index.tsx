@@ -2,6 +2,7 @@ import CallToActionSection from "@/components/Section/CallToActionSection";
 import PageTemplate from "@/components/PageTemplate";
 import HeroSection from "@/components/Section/HeroSection";
 import ProductListSection from "@/components/Section/ProductListSection";
+import Image from "next/image";
 
 import React from "react";
 
@@ -9,13 +10,16 @@ function CateringPackage() {
   return (
     <PageTemplate>
       <HeroSection>
-        <section className="bg-green-600 mb-[80px] lg:mb-[120px]">
+        <section className="bg-green-700 mb-[80px] lg:mb-[120px]">
           <div className="md:flex md:gap-10 md:flex-row-reverse md:items-center max-w-screen-xl mx-auto">
             <div className="md:min-h-[350px]">
-              <img
-                className="object-cover md:min-h-[350px] "
+              <Image
+                priority={true}
+                width={1000}
+                height={500}
                 src="/packageImage-min.webp"
-                alt=""
+                className="object-cover md:min-h-[350px]"
+                alt="food image"
               />
             </div>
 

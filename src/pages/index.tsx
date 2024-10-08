@@ -5,10 +5,11 @@ import SocialProofSection from "@/components/Section/SocialProofSection";
 import ProductListSection from "@/components/Section/ProductListSection";
 import TestimonialSection from "@/components/Section/TestimonialSection";
 import PageTemplate from "@/components/PageTemplate";
-import { useLanguage } from "@/context/languageContext";
-import { languageData } from "@/language/homepageLanguage";
-import { LanguageDataHomepage } from "@/language/homepageLanguage";
+import { useLanguage } from "@/utils/context/languageContext";
+import { languageData } from "@/utils/language/homepageLanguage";
+import { LanguageDataHomepage } from "@/utils/language/homepageLanguage";
 import Header from "@/components/Header";
+import Image from "next/image";
 
 function Home() {
   const { language } = useLanguage();
@@ -24,14 +25,17 @@ function Home() {
           <section className="bg-green-700 ">
             <div className="md:flex md:gap-10 md:flex-row-reverse md:items-center max-w-screen-xl mx-auto">
               <div className="md:max-w-full md:max-h-full md:h-auto md:w-[750px] aspect-square">
-                <img
-                  className="object-cover h-full"
+                <Image
+                  priority={true}
+                  width={1200}
+                  height={600}
+                  className="object-cover h-full w-full"
                   src="/heroImage.webp"
-                  alt=""
+                  alt="hero-image"
                 />
               </div>
 
-              <div className=" px-4 ">
+              <div className=" px-4 py-6 md:py-1">
                 <h1 className="text-3xl text-white font-bold mb-4 lg:text-5xl ">
                   {localization.HeroSection.title()}
                 </h1>
@@ -71,7 +75,10 @@ function Home() {
           </div>
         </div>
         <ProductListSection />
-        <TestimonialSection testimonailList={localization.testimonialSection} />
+        <TestimonialSection
+          header={localization.testimonialSection.title}
+          testimonailList={localization.testimonialSection.listTestimonial}
+        />
       </PageTemplate>
     </>
   );

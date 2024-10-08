@@ -7,10 +7,14 @@ import TestimonialItem from "../TestimonialItem";
 import { TestimonialProps } from "@/utils/interface";
 
 interface TestimonialSectionProps {
+  header: string;
   testimonailList: TestimonialProps[];
 }
 
-function TestimonialSection({ testimonailList }: TestimonialSectionProps) {
+function TestimonialSection({
+  header,
+  testimonailList,
+}: TestimonialSectionProps) {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   console.log("list:", testimonailList);
 
@@ -30,7 +34,7 @@ function TestimonialSection({ testimonailList }: TestimonialSectionProps) {
       <div className="max-w-screen-xl mx-auto">
         <div className=" lg:flex lg:items-center lg:justify-between md:mb-10">
           <h2 className="text-2xl font-bold text-gray-950 mb-10 md:text-3xl md:mb-0">
-            Pejuang Rupiah yang puas dengan Katering Kami
+            {header}
           </h2>
           <div className="hidden items-center justify-center gap-5 md:flex ">
             <a

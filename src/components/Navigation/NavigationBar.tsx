@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { usePathname } from "next/navigation"; // Untuk mengetahui current pathname yang sedang aktif
 import NavLink from "./NavLink";
 import NavigationMobile from "./NavigationMobile";
-import { useLanguage } from "@/context/languageContext";
+import { useLanguage } from "@/utils/context/languageContext";
 
 function NavigationBar() {
   // To control the language

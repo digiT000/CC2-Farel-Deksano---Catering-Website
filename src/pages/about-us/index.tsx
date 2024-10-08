@@ -3,6 +3,7 @@ import OurLocationSection from "@/components/Section/OurLocationSection";
 import PageTemplate from "@/components/PageTemplate";
 import HeroSection from "@/components/Section/HeroSection";
 import React from "react";
+import Image from "next/image";
 
 function AboutUs() {
   return (
@@ -38,20 +39,26 @@ function AboutUs() {
               </p>
             </div>
             <div className=" grid gap-2 grid-cols-3 min-h-[250px] md:min-h-[400px] ">
-              <img
+              <Image
+                width={500}
+                height={800}
                 className="w-full h-full object-cover md:rounded-tl-md md:rounded-tr-md"
                 src="/aboutUs-image-1.webp"
-                alt=""
+                alt="image-food-1"
               />
-              <img
-                className="w-full h-full object-cover  md:rounded-tl-md md:rounded-tr-md"
+              <Image
+                width={500}
+                height={800}
+                className="w-full h-full object-cover md:rounded-tl-md md:rounded-tr-md"
                 src="/aboutUs-image-2.webp"
-                alt=""
+                alt="image-food-1"
               />
-              <img
-                className="w-full h-full object-cover  md:rounded-tl-md md:rounded-tr-md"
+              <Image
+                width={500}
+                height={800}
+                className="w-full h-full object-cover md:rounded-tl-md md:rounded-tr-md"
                 src="/aboutUs-image-3.webp"
-                alt=""
+                alt="image-food-1"
               />
             </div>
           </div>
