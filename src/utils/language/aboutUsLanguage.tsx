@@ -86,7 +86,7 @@ export const languageDataAboutUs: LanguageDataAboutUsProps = {
       subtitle: () => {
         return (
           <p className="text-gray-600 md:text-lg">
-            We've served over{" "}
+            We&apos;ve served over{" "}
             <strong className="text-green-600">500,000+</strong> customers and
             cooked over
             <strong className="text-green-600">1.5 million+</strong> meals from
