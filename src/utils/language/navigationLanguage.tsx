@@ -4,12 +4,6 @@ export interface Navigationprops {
   };
 }
 
-enum NAVIGATION_TYPE {
-  MENU_HOME = "home",
-  MENU_CATERING_PACKAGE = "catering_package",
-  MENU_ABOUT_US = "about_us",
-}
-
 export const navigationLanguage: Navigationprops = {
   id: {
     menu_home: "Home",
