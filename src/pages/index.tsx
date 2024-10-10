@@ -67,14 +67,14 @@ function Home() {
         <div className="px-4 mb-10">
           <div className="max-w-screen-xl mx-auto text-center mb-10">
             <h2 className="text-2xl text-gray-950 font-bold mb-2 md:text-3xl">
-              Pake Menu Makanan Kami
+              {localization.productListSection.title}
             </h2>
             <p className="text-gray-700 md:text-lg">
-              Harga mulai dari Rp 339.000 per bulan
+              {localization.productListSection.description}
             </p>
           </div>
         </div>
-        <ProductListSection />
+        <ProductListSection limit={2} />
         <TestimonialSection
           header={localization.testimonialSection.title}
           testimonailList={localization.testimonialSection.listTestimonial}

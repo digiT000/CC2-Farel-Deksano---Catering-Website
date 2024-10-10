@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import { useLanguage } from "@/utils/context/languageContext";
 
 function Footer() {
+  const { language } = useLanguage();
   return (
     <footer className="px-4 border-t border-t-gray-10 py-10">
       <div className="max-w-screen-xl mx-auto flex flex-col gap-10">

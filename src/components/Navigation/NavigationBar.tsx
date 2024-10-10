@@ -3,10 +3,15 @@ import { usePathname } from "next/navigation"; // Untuk mengetahui current pathn
 import NavLink from "./NavLink";
 import NavigationMobile from "./NavigationMobile";
 import { useLanguage } from "@/utils/context/languageContext";
+import {
+  navigationLanguage,
+  Navigationprops,
+} from "@/utils/language/navigationLanguage";
 
 function NavigationBar() {
   // To control the language
   const { language, changeLanguage } = useLanguage();
+  const localization: Navigationprops[string] = navigationLanguage[language];
   const pathname = usePathname(); // will return /about-us --> if the user in the about us page
 
   const [isOpen, setIsOpen] = useState<boolean>(false); // to control the state of hiding and showing the navigationMobile
@@ -24,19 +29,19 @@ function NavigationBar() {
           <nav className="gap-1 hidden sm:flex sm:items-center">
             <NavLink
               device="desktop"
-              linkName="Home"
+              linkName={localization.menu_home}
               isActive={pathname === "/"}
               href="/"
             />
             <NavLink
               device="desktop"
-              linkName="Package"
+              linkName={localization.menu_cateringPackage}
               isActive={pathname === "/catering-package"}
               href="/catering-package"
             />
             <NavLink
               device="desktop"
-              linkName="About Us"
+              linkName={localization.menu_aboutUs}
               isActive={pathname === "/about-us"}
               href="/about-us"
             />

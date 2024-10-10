@@ -4,8 +4,11 @@ import { fetchDataProduct } from "@/utils/api";
 import { PackageProps, ResponsePackage } from "@/utils/interface";
 import { useRouter } from "next/navigation";
 import ClipLoader from "react-spinners/ClipLoader";
+interface ProductListProps {
+  limit: number;
+}
 
-function ProductListSection() {
+function ProductListSection({ limit }: ProductListProps) {
   const router = useRouter();
 
   const [isloading, setIsLoading] = useState<boolean>(true);
@@ -58,21 +61,25 @@ function ProductListSection() {
             </div>
           ) : (
             response?.map((packageItem: PackageProps, key: number) => {
+              console.log(key);
               console.log("item:", packageItem);
-              return (
-                <ProductCard
-                  mainImage="none"
-                  key={key}
-                  id={packageItem.id}
-                  packageName={packageItem.packageName}
-                  summaryPackage={packageItem.summaryPackage}
-                  imageLink={packageItem.imageLink}
-                  totalMenu={packageItem.totalMenu}
-                  onClick={() => {
-                    console.log(redirect(packageItem.id));
-                  }}
-                />
-              );
+              if (key <= limit) {
+                return (
+                  <ProductCard
+                    mainImage="none"
+                    key={key}
+                    id={packageItem.id}
+                    packageName={packageItem.packageName}
+                    summaryPackage={packageItem.summaryPackage}
+                    imageLink={packageItem.imageLink}
+                    totalMenu={packageItem.totalMenu}
+                    onClick={() => {
+                      console.log(redirect(packageItem.id));
+                    }}
+                  />
+                );
+              } else {
+              }
             })
           )}
         </div>

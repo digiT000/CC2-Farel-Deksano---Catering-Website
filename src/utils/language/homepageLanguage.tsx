@@ -10,6 +10,11 @@ export interface LanguageDataHomepage {
     };
     socialProofSection: SocialProofProps[];
 
+    productListSection: {
+      title: string;
+      description: string;
+    };
+
     listPackageSection: {
       title: string;
       description: string;
@@ -57,6 +62,10 @@ export const languageData: LanguageDataHomepage = {
         description: "Menjangkau lebih banyak pekerja agar lebih sehat sentosa",
       },
     ],
+    productListSection: {
+      title: "Paket Menu Makanan Kami",
+      description: "Harga mulai dari Rp 339.000 per bulan",
+    },
     listPackageSection: {
       title: "Paket Menu Makanan Kami",
       description: "Harga mulai dari Rp 339.000 per bulan",
@@ -114,6 +123,10 @@ export const languageData: LanguageDataHomepage = {
       subtitle: "Choose from hundreds of delicious meals to fuel your day",
       buttonPrimary: "Subscribe Now",
       buttonSecondary: "View Meal Plans",
+    },
+    productListSection: {
+      title: "Our Meal Plan Packages",
+      description: "Starting from Rp 339.000 per month",
     },
     listPackageSection: {
       title: "Our Meal Plans",

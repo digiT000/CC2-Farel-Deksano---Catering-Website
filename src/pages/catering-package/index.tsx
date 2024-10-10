@@ -6,8 +6,16 @@ import Image from "next/image";
 
 import React from "react";
 import Header from "@/components/Header";
+import { useLanguage } from "@/utils/context/languageContext";
+import {
+  LanguageDataPackageProps,
+  languageDataPackage,
+} from "@/utils/language/cateringPackageLanguage";
 
 function CateringPackage() {
+  const { language } = useLanguage();
+  const localization: LanguageDataPackageProps[string] =
+    languageDataPackage[language];
   return (
     <>
       <Header>
@@ -17,7 +25,7 @@ function CateringPackage() {
         <HeroSection>
           <section className="bg-green-700 mb-[80px] lg:mb-[120px]">
             <div className="md:flex md:gap-10 md:flex-row-reverse md:items-center max-w-screen-xl mx-auto">
-              <div className="md:min-h-[350px]">
+              <div className="md:min-h-[350px] md:w-1/2">
                 <Image
                   priority={true}
                   width={1000}
@@ -28,13 +36,12 @@ function CateringPackage() {
                 />
               </div>
 
-              <div className="py-10 px-4 ">
+              <div className="py-10 px-4 md:w-1/2 ">
                 <h1 className="text-3xl text-white font-bold mb-4 lg:text-5xl ">
-                  Pilih dan langganan paket katering
+                  {localization.HeroSection.title}
                 </h1>
                 <p className="text-white lg:text-lg">
-                  Ratusan menu makanan yang bebas Kamu pilih untuk menemani
-                  makan Kamu setiap harinya
+                  {localization.HeroSection.subtitle}
                 </p>
               </div>
             </div>
@@ -42,21 +49,19 @@ function CateringPackage() {
         </HeroSection>
         <div className="px-4 mb-10">
           <div className="max-w-screen-xl mx-auto text-center mb-10">
-            <h2 className="text-2xl text-gray-950 font-bold mb-2">
-              Eksplor Paket makanan Kami, harga mulai dari{" "}
-              <span className="text-green-600">Rp239.000</span>
-            </h2>
+            {localization.productListSection.title()}
+
             <p className="text-gray-700">
-              Cari yang paling sesuai dan kebuthan Kamu
+              {localization.productListSection.subtitle}
             </p>
           </div>
         </div>
-        <ProductListSection />
+        <ProductListSection limit={999} />
         <CallToActionSection
           callToActionToWhere="https://wa.me/"
-          title="Bingung harus pilih pake yang mana?"
-          description="Langsung aja hubungi Kami untuk konsultasi, supaya asupan Kamu sepenuhnya terpenuhi"
-          callToActionText="Konsultasi Sekarang"
+          title={localization.callToActionSection.title}
+          description={localization.callToActionSection.subtitle}
+          callToActionText={localization.callToActionSection.callToActionText}
           image="/cateringPackage-CTA.webp"
         />
       </PageTemplate>

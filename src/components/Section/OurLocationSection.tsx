@@ -34,32 +34,32 @@ function OurLocationSection({
           <LocationChips
             contactButtonText={contactButtonText}
             mapButtonText={mapButtonText}
-            location="Jakarta"
-            detailLocation="Jl. Bendungan Hilir No.62, RT.5/RW.1, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10210"
+            location="Kota Kasablanka"
+            detailLocation="Jl. Raya Casablanca No.Kav 88, Menteng Dalam, Kec. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12870"
             mapURL="https://google.com"
             whatsappURL="https://google.com"
           />
           <LocationChips
             contactButtonText={contactButtonText}
             mapButtonText={mapButtonText}
-            location="Jakarta"
-            detailLocation="Jl. Bendungan Hilir No.62, RT.5/RW.1, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10210"
+            location="BINUS University, Kampus BINUS Anggrek"
+            detailLocation="Jl. Raya Kb. Jeruk No.27, RT.1/RW.9, Kemanggisan, Kec. Palmerah, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530"
             mapURL="https://google.com"
             whatsappURL="https://google.com"
           />
           <LocationChips
             contactButtonText={contactButtonText}
             mapButtonText={mapButtonText}
-            location="Jakarta"
-            detailLocation="Jl. Bendungan Hilir No.62, RT.5/RW.1, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10210"
+            location="Sinarmas"
+            detailLocation="Chase Plaza, Jl. Jenderal Sudirman No.21 Lt.7 Kav, RT.10/RW.1, Kuningan, Karet, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12920  "
             mapURL="https://google.com"
             whatsappURL="https://google.com"
           />
           <LocationChips
             contactButtonText={contactButtonText}
             mapButtonText={mapButtonText}
-            location="Jakarta"
-            detailLocation="Jl. Bendungan Hilir No.62, RT.5/RW.1, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10210"
+            location="Plasa Telkom Indonesia"
+            detailLocation="No.Kav. 52, Gedung Telkom Landmark Tower II, Jl. Gatot Subroto lantai.39, Kec. Mampang Prpt., Kota Jakarta Selatan, 12710"
             mapURL="https://google.com"
             whatsappURL="https://google.com"
           />

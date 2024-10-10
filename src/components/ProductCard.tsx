@@ -18,7 +18,7 @@ function ProductCard({
         src={imageLink}
         width={400}
         height={250}
-        className="rounded-lg"
+        className="rounded-lg w-full"
         alt={`Gambar ${packageName}`}
       />
 

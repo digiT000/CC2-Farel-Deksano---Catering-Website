@@ -69,7 +69,7 @@ export default function PackageDetail() {
               <div className="flex flex-col gap-5 md:h-fit md:sticky md:top-20">
                 <Image
                   src={product.mainImage}
-                  width={1024}
+                  width={600}
                   height={600}
                   alt="tes"
                   className="w-full object-cover rounded-md"
