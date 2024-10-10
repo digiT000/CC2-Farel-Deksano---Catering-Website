@@ -1,5 +1,3 @@
-import { navigationLanguage } from "./navigationLanguage";
-
 export interface LanguageFooterProps {
   [key: string]: {
     description: string;
