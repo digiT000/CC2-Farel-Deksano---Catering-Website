@@ -7,6 +7,7 @@ import {
   navigationLanguage,
   Navigationprops,
 } from "@/utils/language/navigationLanguage";
+import Link from "next/link";
 
 function NavigationBar() {
   // To control the language
@@ -25,7 +26,9 @@ function NavigationBar() {
     <>
       <header className="px-4 sticky top-0 bg-white z-50">
         <div className="container py-3 flex items-center justify-between mx-auto">
-          <img src="/dummyLogo.svg" alt="Logo Katering" />
+          <Link href="/">
+            <img src="/dummyLogo.svg" alt="Logo Katering" />
+          </Link>
           <nav className="gap-1 hidden sm:flex sm:items-center">
             <NavLink
               device="desktop"

@@ -20,6 +20,10 @@ function CateringPackage() {
     <>
       <Header>
         <title>Paket Katering - Katering Sehat</title>
+        <meta
+          name="description"
+          content="Katering rupiah adalah katering murah untuk para pegawai kantoran. Paket katering beragam mulai dari Rp 239.000"
+        />
       </Header>
       <PageTemplate>
         <HeroSection>
@@ -56,7 +60,7 @@ function CateringPackage() {
             </p>
           </div>
         </div>
-        <ProductListSection limit={999} />
+        <ProductListSection showButton={false} limit={999} />
         <CallToActionSection
           callToActionToWhere="https://wa.me/"
           title={localization.callToActionSection.title}

@@ -4,11 +4,13 @@ import { fetchDataProduct } from "@/utils/api";
 import { PackageProps, ResponsePackage } from "@/utils/interface";
 import { useRouter } from "next/navigation";
 import ClipLoader from "react-spinners/ClipLoader";
+import Button from "../Button";
 interface ProductListProps {
   limit: number;
+  showButton: boolean;
 }
 
-function ProductListSection({ limit }: ProductListProps) {
+function ProductListSection({ limit, showButton }: ProductListProps) {
   const router = useRouter();
 
   const [isloading, setIsLoading] = useState<boolean>(true);
@@ -34,7 +36,6 @@ function ProductListSection({ limit }: ProductListProps) {
           };
         }
       );
-      console.log("result", responseItems);
       setResponse(responseItems);
       setIsLoading(false);
     } catch (error) {
@@ -50,7 +51,6 @@ function ProductListSection({ limit }: ProductListProps) {
     router.push(`/catering-package/${packageId}`);
   }
 
-  console.log("Inner Response:", response);
   return (
     <section className="px-4 mb-[120px]">
       <div className="max-w-screen-xl mx-auto">
@@ -74,7 +74,7 @@ function ProductListSection({ limit }: ProductListProps) {
                     imageLink={packageItem.imageLink}
                     totalMenu={packageItem.totalMenu}
                     onClick={() => {
-                      console.log(redirect(packageItem.id));
+                      redirect(packageItem.id);
                     }}
                   />
                 );
@@ -83,6 +83,16 @@ function ProductListSection({ limit }: ProductListProps) {
             })
           )}
         </div>
+        {showButton && (
+          <div className="flex items-center justify-center">
+            <Button
+              isButton={false}
+              buttonType="primary"
+              toWhere="/catering-package"
+              buttonText="See More"
+            ></Button>
+          </div>
+        )}
       </div>
     </section>
   );

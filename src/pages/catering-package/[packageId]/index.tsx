@@ -61,6 +61,10 @@ export default function PackageDetail() {
     <>
       <Header>
         <title>{`${product.packageName} - Katering Sehat`}</title>
+        <meta
+          name="description"
+          content="Katering rupiah adalah katering murah untuk para pegawai kantoran. Paket katering beragam mulai dari Rp 239.000"
+        />
       </Header>
       <PageTemplate>
         <section className="px-4 py-8">

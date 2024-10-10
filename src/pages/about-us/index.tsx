@@ -21,6 +21,10 @@ function AboutUs() {
     <>
       <Header>
         <title>tentang Kami - Katering Sehat</title>
+        <meta
+          name="description"
+          content="Katering rupiah adalah katering murah untuk para pegawai kantoran. Paket katering beragam mulai dari Rp 239.000"
+        />
       </Header>
       <PageTemplate>
         <HeroSection>

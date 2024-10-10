@@ -19,6 +19,10 @@ function Home() {
     <>
       <Header>
         <title>Home</title>
+        <meta
+          name="description"
+          content="Katering rupiah adalah katering murah untuk para pegawai kantoran. Paket katering beragam mulai dari Rp 239.000"
+        />
       </Header>
       <PageTemplate>
         <HeroSection>
@@ -53,7 +57,7 @@ function Home() {
                   />
                   <Button
                     isButton={false}
-                    toWhere="https://wa.me/"
+                    toWhere="/catering-package"
                     buttonType="secondary"
                     onClick={() => console.log("click")}
                     buttonText={localization.HeroSection.buttonSecondary}
@@ -74,7 +78,7 @@ function Home() {
             </p>
           </div>
         </div>
-        <ProductListSection limit={2} />
+        <ProductListSection showButton={true} limit={2} />
         <TestimonialSection
           header={localization.testimonialSection.title}
           testimonailList={localization.testimonialSection.listTestimonial}
