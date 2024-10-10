@@ -9,7 +9,6 @@ import {
   LanguageDataAboutUsProps,
   languageDataAboutUs,
 } from "@/utils/language/aboutUsLanguage";
-
 import Header from "@/components/Header";
 
 function AboutUs() {
@@ -28,13 +27,15 @@ function AboutUs() {
       </Header>
       <PageTemplate>
         <HeroSection>
-          <section className="bg-green-700 mb-[80px] lg:mb-[120px] bg-[url('/heroImage-AboutUs.png')] bg-cover bg-no-repeat bg-right px-4">
-            <div className="max-w-screen-xl mx-auto text-center text-white py-20">
-              <div className="max-w-screen-md mx-auto">
-                <h1 className="text-3xl font-bold mb-7 md:text-5xl ">
-                  {localization.HeroSection.title}
-                </h1>
-                <p className="">{localization.HeroSection.subtitle}</p>
+          <section className=" mb-[80px] lg:mb-[120px] bg-[url('/heroImage-AboutUs.webp')] bg-cover bg-no-repeat bg-right ">
+            <div className="px-4 w-full h-full bg-green-700/[0.6]">
+              <div className="max-w-screen-xl mx-auto text-center text-white py-20">
+                <div className="max-w-screen-md mx-auto">
+                  <h1 className="text-3xl font-bold mb-7 md:text-5xl ">
+                    {localization.HeroSection.title}
+                  </h1>
+                  <p className="">{localization.HeroSection.subtitle}</p>
+                </div>
               </div>
             </div>
           </section>
