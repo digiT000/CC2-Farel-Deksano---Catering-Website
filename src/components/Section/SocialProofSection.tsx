@@ -6,7 +6,6 @@ interface SocialProofSectionProps {
 }
 
 function SocialProofSection({ socialProofList }: SocialProofSectionProps) {
-  console.log("Proof List", socialProofList);
   return (
     <section className="px-4 bg-green-800 mb-[80px] lg:mb-[120px]">
       <div className="max-w-screen-xl mx-auto">

@@ -23,7 +23,6 @@ export default function PackageDetail() {
     totalMenu: 0,
     mainImage: "",
   });
-  // console.log(packageId);
 
   async function fetchProduct(packageId: string | string[] | undefined) {
     try {
@@ -48,12 +47,9 @@ export default function PackageDetail() {
     fetchProduct(packageId);
   }, [router.query]);
 
-  console.log("List Menu:", product?.listMenu);
   const waBaseUrl = `https://wa.me/6287741604343?text=`;
   const seperateProductName = product.packageName.replaceAll(" ", "%20");
   const urlText = waBaseUrl + seperateProductName + "%20";
-
-  console.log(urlText);
 
   return isLoading ? (
     <ProductDetailLoading></ProductDetailLoading>

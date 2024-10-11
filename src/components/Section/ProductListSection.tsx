@@ -20,12 +20,9 @@ function ProductListSection({ limit, showButton }: ProductListProps) {
     try {
       const response = await fetchDataProduct();
 
-      console.log("fetch resp:", response);
-
       // mapping response to package properties
       const responseItems: PackageProps[] = response.items.map(
         (item: ResponsePackage) => {
-          console.log("item ID", item);
           return {
             id: item.sys.id,
             packageName: item.fields.packageName,
