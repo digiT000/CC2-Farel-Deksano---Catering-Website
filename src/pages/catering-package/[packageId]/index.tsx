@@ -96,9 +96,6 @@ export default function PackageDetail() {
                     props={product?.id}
                     buttonText="Langganan Paket"
                     buttonType="primary"
-                    onClick={() => {
-                      console.log("click");
-                    }}
                   />
                 </div>
               </div>
