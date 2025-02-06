@@ -58,8 +58,6 @@ function ProductListSection({ limit, showButton }: ProductListProps) {
             </div>
           ) : (
             response?.map((packageItem: PackageProps, key: number) => {
-              console.log(key);
-              console.log("item:", packageItem);
               if (key <= limit) {
                 return (
                   <ProductCard
