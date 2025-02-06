@@ -16,7 +16,6 @@ function TestimonialSection({
   testimonailList,
 }: TestimonialSectionProps) {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
-  console.log("list:", testimonailList);
 
   const handleNextClick = () => {
     if (swiper) {
