@@ -44,7 +44,6 @@ function CallToActionSection({
               toWhere={callToActionToWhere}
               buttonText={callToActionText}
               buttonType="primary"
-              onClick={() => console.log("click")}
             />
           </div>
         </div>
