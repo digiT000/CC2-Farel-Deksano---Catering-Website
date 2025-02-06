@@ -52,14 +52,12 @@ function Home() {
                     isButton={false}
                     toWhere="https://wa.me/"
                     buttonType="primary"
-                    onClick={() => console.log("click")}
                     buttonText={localization.HeroSection.buttonPrimary}
                   />
                   <Button
                     isButton={false}
                     toWhere="/catering-package"
                     buttonType="secondary"
-                    onClick={() => console.log("click")}
                     buttonText={localization.HeroSection.buttonSecondary}
                   />
                 </div>
