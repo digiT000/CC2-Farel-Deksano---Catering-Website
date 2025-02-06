@@ -18,10 +18,8 @@ function NavigationBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false); // to control the state of hiding and showing the navigationMobile
 
   function toggleMenu() {
-    console.log(isOpen);
     setIsOpen(!isOpen);
   }
-  console.log("current Lang:", language);
   return (
     <>
       <header className="px-4 sticky top-0 bg-white z-50">
